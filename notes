@@ -1,0 +1,12 @@
+/var/www/mapbender/application/app/logs/prod.log
+
+php app/console doctrine:database:create
+php app/console doctrine:schema:create
+php app/console assets:install web
+
+php app/console fom:user:resetroot
+root
+email
+root
+
+php app/console server:run
