@@ -20,6 +20,7 @@ RUN chmod -R ug+w /var/www/mapbender/application/web/uploads
 # need check path after build steps
 #RUN chmod ug+w /var/www/mapbender/application/app/db/demo.sqlite
 #RUN chmod ug+x /var/www/mapbender/application/vendor/eslider/sasscb/dist/sassc
+RUN chmod ug+x /var/www/mapbender/application/vendor/wheregroup/sassc-binaries/dist/sassc
 
 RUN a2enmod rewrite
 RUN echo 'ServerName localhost' >> /etc/apache2/apache2.conf
