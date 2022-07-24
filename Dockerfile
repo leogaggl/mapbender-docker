@@ -7,9 +7,9 @@ RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 RUN sh -c 'echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'
 RUN apt-get update -y
 RUN apt-get install apache2 curl git openssl vim -y --allow-unauthenticated
-RUN apt-get install php php-common php-gd php-curl php-cli php-xml -y --allow-unauthenticated
-RUN apt-get install sqlite3 php-sqlite3 php-intl openssl php-zip php-mbstring php-bz2 -y --allow-unauthenticated
-RUN apt-get install php-fpm php-pgsql php-mysql -y --allow-unauthenticated
+UN apt-get install php7.4 php7.4-common php7.4-gd php7.4-curl php7.4-cli php7.4-xml -y --allow-unauthenticated
+RUN apt-get install sqlite3 php7.4-sqlite3 php7.4-intl openssl php7.4-zip php7.4-mbstring php7.4-bz2 -y --allow-unauthenticated
+RUN apt-get install php7.4-fpm php7.4-pgsql php7.4-mysql -y --allow-unauthenticated
 
 RUN git clone https://github.com/mapbender/mapbender-starter.git /var/www/mapbender
 RUN cd /var/www/mapbender; ./bootstrap
