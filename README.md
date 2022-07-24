@@ -1,5 +1,5 @@
 This Dockerfile clones the mapbender-starter git repository and builds
-a debian 9 container with mapbender up and running.
+a Debian 11 container with mapbender up and running.
 
 To get started:
 
@@ -12,4 +12,4 @@ Do once:
 To start:
 
 * `docker-compose up`
-* `call http://localhost:9000 or http://localhost:9000/app.php in your browser`
+* `call http://localhost:9090 or http://localhost:9090/app.php in your browser`
